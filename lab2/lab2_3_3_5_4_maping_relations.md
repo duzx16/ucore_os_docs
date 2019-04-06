@@ -86,7 +86,7 @@ next:
 最终，离开这个阶段时，虚拟地址、线性地址以及物理地址之间的映射关系为：
 
 ```
- lab2 stage 2: virt addr = linear addr = phy addr + 0xC0000000 # 线性地址在0~4MB之内三者的映射关系
+ lab2 stage 2: virt addr = linear addr = phy addr + 0xC0000000 # 线性地址在0xC0000000~0xC0000000+4MB之内三者的映射关系
 ```
 
 总结来看，这一阶段的目的就是更新映射关系的同时将运行中的内核（EIP）从低虚拟地址“迁移”到高虚拟地址，而不造成伤害。
